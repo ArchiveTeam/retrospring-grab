@@ -77,7 +77,7 @@ if not WGET_AT:
 #
 # Update this each time you make a non-cosmetic change.
 # It will be added to the WARC files and reported to the tracker.
-VERSION = '20250213.02'
+VERSION = '20250213.03'
 USER_AGENT = 'Mozilla/5.0 (X11; Linux i686; rv:124.0) Gecko/20100101 Firefox/124.0'
 TRACKER_ID = 'retrospring'
 TRACKER_HOST = 'legacy-api.arpa.li'
@@ -345,9 +345,9 @@ class WgetArgs(object):
 project = Project(
     title=TRACKER_ID,
     project_html='''
-        <img class="project-logo" alt="Project logo" src="https://wiki.archiveteam.org/images/thumb/7/72/Greater_coat_of_arms_of_the_United_States.png/568px-Greater_coat_of_arms_of_the_United_States.png" height="50px" title=""/>
-        <h2>US government <span class="links"><a href="https://www.usa.gov/">Website</a> &middot; <a href="http://tracker.archiveteam.org/usgovernment/">Leaderboard</a> &middot; <a href="https://wiki.archiveteam.org/index.php/US_Government">Wiki</a></span></h2>
-        <p>Archiving the US government.</p>
+        <img class="project-logo" alt="Project logo" src="https://wiki.archiveteam.org/images/b/bb/Retrospring-icon.png" height="50px" title=""/>
+        <h2>Retrospring <span class="links"><a href="https://retrospring.net/">Website</a> &middot; <a href="http://tracker.archiveteam.org/retrospring/">Leaderboard</a> &middot; <a href="https://wiki.archiveteam.org/index.php/Retrospring">Wiki</a></span></h2>
+        <p>Archiving Retrospring again.</p>
     '''
 )
 
