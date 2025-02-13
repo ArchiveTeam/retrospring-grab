@@ -77,7 +77,7 @@ if not WGET_AT:
 #
 # Update this each time you make a non-cosmetic change.
 # It will be added to the WARC files and reported to the tracker.
-VERSION = '20250213.03'
+VERSION = '20250213.04'
 USER_AGENT = 'Mozilla/5.0 (X11; Linux i686; rv:124.0) Gecko/20100101 Firefox/124.0'
 TRACKER_ID = 'retrospring'
 TRACKER_HOST = 'legacy-api.arpa.li'
@@ -308,7 +308,7 @@ class WgetArgs(object):
             wget_args.extend(['--warc-header', 'x-wget-at-project-item-name: '+item_name])
             wget_args.append('item-name://'+item_name)
             item_type, item_value = item_name.split(':', 1)
-            if item_type == 'user':
+            if item_type == 'account':
                 wget_args.extend(['--warc-header', 'retrospring-user: '+item_value])
                 wget_args.append('https://retrospring.net/@'+item_value)
             elif item_type == 'question':
