@@ -303,7 +303,6 @@ wget.callbacks.get_urls = function(file, url, is_css, iri)
     if not processed(url_)
       and not processed(url_ .. "/")
       and allowed(url_, origurl) then
-print('QUEUING', url_)
       local headers = {}
       if turbo_frame then
         headers["turbo-frame"] = turbo_frame
