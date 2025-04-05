@@ -526,7 +526,8 @@ wget.callbacks.write_to_warc = function(url, http_stat)
     error("No item name found.")
   end
   is_initial_url = false
-  if http_stat["statcode"] ~= 200 then
+  if http_stat["statcode"] ~= 200
+    and http_stat["statcode"] ~= 404 then
     retry_url = true
     return false
   end
@@ -574,7 +575,6 @@ wget.callbacks.httploop_result = function(url, err, http_stat)
     tries = tries + 1
     local maxtries = 11
     if status_code == 401 or status_code == 403 then
-      os.execute("sleep 60")
       tries = maxtries + 1
     end
     if tries > maxtries then
